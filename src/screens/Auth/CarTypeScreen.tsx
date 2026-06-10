@@ -48,6 +48,7 @@ const CarTypeScreen: React.FC<Props> = ({ route }) => {
       // Complete login here: persist token and flip isLoggedIn, which
       // makes AppNavigator swap the Auth stack for Main.
       await Storage.set('token', token);
+      await Storage.set('user', user);
       dispatch(setCredentials({ user, token }));
       setLoading(false);
     }

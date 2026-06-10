@@ -43,6 +43,7 @@ const LoginScreen: React.FC<Props> = ({ navigation }) => {
       const res = await authService.login({ email, password });
       const { user, token } = res.data.data;
       await Storage.set('token', token);
+      await Storage.set('user', user);
       dispatch(setCredentials({ user, token }));
     } catch (err: any) {
       const msg = err.response?.data?.message || t('common.error');

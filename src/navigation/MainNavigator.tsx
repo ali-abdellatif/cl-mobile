@@ -10,12 +10,12 @@ import HomeScreen from '../screens/Home/HomeScreen';
 import ProductDetailsScreen from '../screens/Home/ProductDetailsScreen';
 import CategoryProductsScreen from '../screens/Home/CategoryProductsScreen';
 import FilterScreen from '../screens/Home/FilterScreen';
+import SettingsNavigator from './SettingsNavigator';
 
 // Placeholder screens for tabs not yet built
 const CartPlaceholder = () => { const {colors} = useAppTheme(); return <View style={{flex:1,backgroundColor:colors.background,justifyContent:'center',alignItems:'center'}}><Text style={{color:colors.text}}>Cart — Coming Soon</Text></View>; };
 const FavPlaceholder = () => { const {colors} = useAppTheme(); return <View style={{flex:1,backgroundColor:colors.background,justifyContent:'center',alignItems:'center'}}><Text style={{color:colors.text}}>Favourites — Coming Soon</Text></View>; };
 const MaintPlaceholder = () => { const {colors} = useAppTheme(); return <View style={{flex:1,backgroundColor:colors.background,justifyContent:'center',alignItems:'center'}}><Text style={{color:colors.text}}>Maintenance — Coming Soon</Text></View>; };
-const SettingsPlaceholder = () => { const {colors} = useAppTheme(); return <View style={{flex:1,backgroundColor:colors.background,justifyContent:'center',alignItems:'center'}}><Text style={{color:colors.text}}>Settings — Coming Soon</Text></View>; };
 const NotifPlaceholder = () => { const {colors} = useAppTheme(); return <View style={{flex:1,backgroundColor:colors.background,justifyContent:'center',alignItems:'center'}}><Text style={{color:colors.text}}>Notifications — Coming Soon</Text></View>; };
 
 export type HomeStackParamList = {
@@ -44,7 +44,7 @@ const TABS = [
   { name: 'CartTab', component: CartPlaceholder, icon: '🛒', label: 'Cart' },
   { name: 'FavTab', component: FavPlaceholder, icon: '🤍', label: 'Fav' },
   { name: 'MaintenanceTab', component: MaintPlaceholder, icon: '🔧', label: 'Service' },
-  { name: 'SettingsTab', component: SettingsPlaceholder, icon: '⚙️', label: 'Settings' },
+  { name: 'SettingsTab', component: SettingsNavigator, icon: '⚙️', label: 'Settings' },
 ];
 
 const MainNavigator = () => {

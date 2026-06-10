@@ -11,6 +11,8 @@ const en = {
     login: 'Login',
     signup: 'Sign up',
     next: 'Next',
+    save: 'Save',
+    logout: 'Logout',
     error: 'Something went wrong. Please try again.',
   },
   auth: {
@@ -47,6 +49,27 @@ const en = {
     bestSeller: 'Best Seller',
     seeAll: 'See all',
   },
+  settings: {
+    title: 'Settings',
+    myOrders: 'My Orders',
+    account: 'Account',
+    more: 'More',
+    editProfile: 'Edit Profile',
+    changePassword: 'Change Password',
+    editCarType: 'Edit Car Type',
+    language: 'Language',
+    notifications: 'Notifications',
+    darkMode: 'Dark Mode',
+  },
+  orders: {
+    title: 'My Orders',
+    previous: 'Previous',
+    current: 'Current',
+  },
+  notifications: {
+    title: 'Notifications',
+    empty: 'No notifications yet',
+  },
 };
 
 const ar = {
@@ -58,6 +81,8 @@ const ar = {
     login: 'تسجيل الدخول',
     signup: 'إنشاء حساب',
     next: 'التالي',
+    save: 'حفظ',
+    logout: 'تسجيل الخروج',
     error: 'حدث خطأ ما. يرجى المحاولة مرة أخرى.',
   },
   auth: {
@@ -92,6 +117,27 @@ const ar = {
     bundles: 'الباقات',
     bestSeller: 'الأكثر مبيعًا',
     seeAll: 'عرض الكل',
+  },
+  settings: {
+    title: 'الإعدادات',
+    myOrders: 'طلباتي',
+    account: 'الحساب',
+    more: 'المزيد',
+    editProfile: 'تعديل الملف الشخصي',
+    changePassword: 'تغيير كلمة المرور',
+    editCarType: 'تعديل نوع السيارة',
+    language: 'اللغة',
+    notifications: 'الإشعارات',
+    darkMode: 'الوضع الداكن',
+  },
+  orders: {
+    title: 'طلباتي',
+    previous: 'السابقة',
+    current: 'الحالية',
+  },
+  notifications: {
+    title: 'الإشعارات',
+    empty: 'لا توجد إشعارات بعد',
   },
 };
 
