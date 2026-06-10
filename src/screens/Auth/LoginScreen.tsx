@@ -115,6 +115,29 @@ const LoginScreen: React.FC<Props> = ({ navigation }) => {
           </Text>
         </TouchableOpacity>
       </View>
+
+      {__DEV__ && (
+        <TouchableOpacity
+          onPress={() => {
+            dispatch(setCredentials({
+              user: {
+                id: 1,
+                name: 'Ahmed Mohamed',
+                email: 'ahmed@test.com',
+                phone: '+20123456789',
+                region: 'Cairo',
+                avatar: undefined,
+              },
+              token: 'dev-token-123',
+            }));
+          }}
+          style={{ marginTop: 16, alignItems: 'center' }}
+        >
+          <Text style={{ color: '#999', fontSize: 12 }}>
+            [DEV] Skip Login →
+          </Text>
+        </TouchableOpacity>
+      )}
     </ScrollView>
   );
 };
