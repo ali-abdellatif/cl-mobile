@@ -18,4 +18,23 @@ buildscript {
     }
 }
 
+// Force all sub-modules (third-party RN libraries) onto the SDK + build-tools that are
+// already installed locally. Some libraries (e.g. @react-native-async-storage) pin their
+// own older compileSdk (35) via a namespaced ext and ignore the root compileSdkVersion,
+// which makes Gradle try to auto-download the missing android-35 platform — and that
+// download keeps failing here ("Unexpected end of ZLIB input stream"). Pinning every
+// module to 36 needs zero downloads and fixes all such libraries at once.
+// NOTE: registered BEFORE the react rootproject plugin so the afterEvaluate hooks are in
+// place before that plugin eagerly evaluates subprojects.
+subprojects { subproject ->
+    afterEvaluate {
+        if (subproject.hasProperty("android")) {
+            android {
+                compileSdkVersion 36
+                buildToolsVersion "36.0.0"
+            }
+        }
+    }
+}
+
 apply plugin: "com.facebook.react.rootproject"

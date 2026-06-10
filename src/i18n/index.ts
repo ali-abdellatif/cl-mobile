@@ -1,0 +1,111 @@
+// NOTE: Scaffolded by setup. Imported for its side effect via `import './src/i18n'`.
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
+
+const en = {
+  common: {
+    email: 'Email',
+    password: 'Password',
+    fullName: 'Full Name',
+    phone: 'Phone',
+    login: 'Login',
+    signup: 'Sign up',
+    next: 'Next',
+    error: 'Something went wrong. Please try again.',
+  },
+  auth: {
+    loginTitle: 'Login',
+    loginSubtitle: 'Welcome back! Please enter your details.',
+    loginSubtitleAlt: 'Welcome back! Please enter your details.',
+    wrongCredentials: 'Wrong email or password',
+    forgotPassword: 'Forgot Password?',
+    forgotSubtitle: "Enter your email and we'll send you a code to reset your password.",
+    dontHave: "Don't have an account?",
+    alreadyHave: 'Already have an account?',
+    createAccount: 'Create Account',
+    createSubtitle: 'Fill in your details to get started.',
+    getCode: 'Get Code',
+    getCodeSubtitle: 'Enter the 4-digit code we sent to your email.',
+    codeExpires: 'Code expires in',
+    resend: 'Resend',
+    newPassword: 'New Password',
+    newPasswordSubtitle: 'Create a new password for your account.',
+  },
+  carType: {
+    title: 'Choose Your Car',
+    subtitle: "Select your car's details so we can show the right parts.",
+    country: 'Country',
+    brand: 'Brand',
+    model: 'Model',
+  },
+  home: {
+    hello: 'Hello',
+    filterBrand: 'Search by brand or part...',
+    categoryOffers: 'Category Offers',
+    mainCategories: 'Main Categories',
+    bundles: 'Bundles',
+    bestSeller: 'Best Seller',
+    seeAll: 'See all',
+  },
+};
+
+const ar = {
+  common: {
+    email: 'البريد الإلكتروني',
+    password: 'كلمة المرور',
+    fullName: 'الاسم الكامل',
+    phone: 'رقم الهاتف',
+    login: 'تسجيل الدخول',
+    signup: 'إنشاء حساب',
+    next: 'التالي',
+    error: 'حدث خطأ ما. يرجى المحاولة مرة أخرى.',
+  },
+  auth: {
+    loginTitle: 'تسجيل الدخول',
+    loginSubtitle: 'مرحبًا بعودتك! من فضلك أدخل بياناتك.',
+    wrongCredentials: 'البريد الإلكتروني أو كلمة المرور غير صحيحة',
+    forgotPassword: 'نسيت كلمة المرور؟',
+    forgotSubtitle: 'أدخل بريدك الإلكتروني وسنرسل لك رمزًا لإعادة تعيين كلمة المرور.',
+    dontHave: 'ليس لديك حساب؟',
+    alreadyHave: 'لديك حساب بالفعل؟',
+    createAccount: 'إنشاء حساب',
+    createSubtitle: 'املأ بياناتك للبدء.',
+    getCode: 'الحصول على الرمز',
+    getCodeSubtitle: 'أدخل الرمز المكون من 4 أرقام الذي أرسلناه إلى بريدك.',
+    codeExpires: 'تنتهي صلاحية الرمز خلال',
+    resend: 'إعادة الإرسال',
+    newPassword: 'كلمة مرور جديدة',
+    newPasswordSubtitle: 'أنشئ كلمة مرور جديدة لحسابك.',
+  },
+  carType: {
+    title: 'اختر سيارتك',
+    subtitle: 'اختر تفاصيل سيارتك حتى نعرض لك القطع المناسبة.',
+    country: 'الدولة',
+    brand: 'الماركة',
+    model: 'الموديل',
+  },
+  home: {
+    hello: 'مرحبًا',
+    filterBrand: 'ابحث بالماركة أو القطعة...',
+    categoryOffers: 'عروض الفئات',
+    mainCategories: 'الفئات الرئيسية',
+    bundles: 'الباقات',
+    bestSeller: 'الأكثر مبيعًا',
+    seeAll: 'عرض الكل',
+  },
+};
+
+i18n.use(initReactI18next).init({
+  resources: {
+    en: { translation: en },
+    ar: { translation: ar },
+  },
+  lng: 'en',
+  fallbackLng: 'en',
+  compatibilityJSON: 'v4',
+  interpolation: {
+    escapeValue: false,
+  },
+});
+
+export default i18n;
